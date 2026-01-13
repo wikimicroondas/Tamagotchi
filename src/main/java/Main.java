@@ -19,6 +19,7 @@ public class Main {
                 "2. Comer",
                 "3. Jugar",
                 "4. Dormir",
+                "5. Saludar",
                 "----------------",
                 "0. Salir\n",
                 "Seleccione una opción del menú: "
@@ -36,7 +37,7 @@ public class Main {
 
             try {
                 input = Integer.parseInt(sc.nextLine());
-                if (input > 4 || input < 0){
+                if (input > 5 || input < 0){
                     System.out.println("Introduce un valor válido.\n");
                     continue;
                 }
@@ -173,26 +174,37 @@ public class Main {
         }
     }
 
+    private static void saludar(){
+        System.out.println("\nHola!!!!");
+        mostrarEstado();
+    }
+
     public static void main(String[] args){
         // Cambio de la estructura a una estática (por los métodos)
         int input = menuPrincipal();
 
-        switch (input) {
-            case (1):
-                mostrarEstado();
-                break;
-            case (2):
-                comer();
-                break;
-            case (3):
-                jugar();
-                break;
-            case (4):
-                dormir();
-                break;
-            case (0):
-                // salir();
-                break;
+        while (true){
+            switch (input) {
+                case (1):
+                    mostrarEstado();
+                    break;
+                case (2):
+                    comer();
+                    break;
+                case (3):
+                    jugar();
+                    break;
+                case (4):
+                    dormir();
+                    break;
+                case (5):
+                    saludar();
+                    break;
+                case (0):
+                    System.out.println("\n-- Hasta la próxima! --");
+                    return;
+            }
+            input = menuPrincipal();
         }
     }
 }
