@@ -145,6 +145,20 @@ public class Main {
         }
     }
 
+    private static void jugar(){
+        if (diversion < 10){
+            diversion += 3;
+            saciedad -= 1;
+            energia -= 1;
+            if (diversion > 10){
+                diversion = 10;
+            }
+            mostrarEstado();
+        } else {
+            System.out.println("\nAhora no me apetece jugar.");
+        }
+    }
+
     public static void main(String[] args){
         // Cambio de la estructura a una estática (por los métodos)
         int input = menuPrincipal();
@@ -157,7 +171,7 @@ public class Main {
                 comer();
                 break;
             case (3):
-                // jugar();
+                jugar();
                 break;
             case (4):
                 // dormir();
