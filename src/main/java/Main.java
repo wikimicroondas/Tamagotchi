@@ -140,7 +140,7 @@ public class Main {
 
         switch (input) {
             case (1):
-                // mostrarEstado();
+                mostrarEstado();
                 break;
             case (2):
                 // comer();
