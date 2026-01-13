@@ -134,11 +134,12 @@ public class Main {
 
     private static void comer(){
         if (saciedad < 10){
-            saciedad += 5;
+            saciedad += 3;
             diversion -= 1;
             if (saciedad > 10){
                 saciedad = 10;
             }
+            mostrarEstado();
         } else {
             System.out.println("\nNo tengo hambre.");
         }
