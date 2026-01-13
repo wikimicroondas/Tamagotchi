@@ -159,6 +159,20 @@ public class Main {
         }
     }
 
+    private static void dormir(){
+        if (energia < 10){
+            energia += 3;
+            saciedad -= 3;
+            diversion -= 2;
+            if (energia > 10){
+                energia = 10;
+            }
+            mostrarEstado();
+        } else {
+            System.out.println("\nNo tengo sueño.");
+        }
+    }
+
     public static void main(String[] args){
         // Cambio de la estructura a una estática (por los métodos)
         int input = menuPrincipal();
@@ -174,7 +188,7 @@ public class Main {
                 jugar();
                 break;
             case (4):
-                // dormir();
+                dormir();
                 break;
             case (0):
                 // salir();
