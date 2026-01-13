@@ -132,6 +132,18 @@ public class Main {
         }
     }
 
+    private static void comer(){
+        if (saciedad < 10){
+            saciedad += 5;
+            diversion -= 1;
+            if (saciedad > 10){
+                saciedad = 10;
+            }
+        } else {
+            System.out.println("\nNo tengo hambre.");
+        }
+    }
+
     public static void main(String[] args){
         // Cambio de la estructura a una estática (por los métodos)
         int input = menuPrincipal();
@@ -141,7 +153,7 @@ public class Main {
                 mostrarEstado();
                 break;
             case (2):
-                // comer();
+                comer();
                 break;
             case (3):
                 // jugar();
