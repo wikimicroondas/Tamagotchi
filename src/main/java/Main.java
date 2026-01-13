@@ -136,8 +136,6 @@ public class Main {
         // Cambio de la estructura a una estática (por los métodos)
         int input = menuPrincipal();
 
-
-
         switch (input) {
             case (1):
                 mostrarEstado();
