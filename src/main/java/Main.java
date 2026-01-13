@@ -135,7 +135,7 @@ public class Main {
     private static void comer(){
         if (saciedad < 10){
             saciedad += 3;
-            diversion -= 1;
+            diversion -= 2;
             if (saciedad > 10){
                 saciedad = 10;
             }
@@ -161,9 +161,9 @@ public class Main {
 
     private static void dormir(){
         if (energia < 10){
-            energia += 3;
-            saciedad -= 3;
-            diversion -= 2;
+            energia += 2;
+            saciedad -= 1;
+            diversion -= 1;
             if (energia > 10){
                 energia = 10;
             }
