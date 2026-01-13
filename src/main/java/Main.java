@@ -124,10 +124,12 @@ public class Main {
             for(String i: hambriento){
                 System.out.println(i);
             }
-        } else if (saciedad == 0 || energia == 0 || diversion == 0) {
+        } else if (saciedad <= 0 || energia <= 0 || diversion <= 0) {
             for(String i: finDelJuego){
                 System.out.println(i);
             }
+            System.out.println("\nGAME OVER: Tu Tamagotchi ha pasado a mejor vida.");
+            System.exit(0);
         } else {
             System.out.println("¡Logro oculto!");
         }
